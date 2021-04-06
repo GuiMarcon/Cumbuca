@@ -29,6 +29,9 @@ body {
   .bg-grey {
     background-color: #f6f6f6;
   }
+  .cor{
+    background-color: #87060F;
+  }
   .logo-small {
     color: #87060F;
     font-size: 50px;
