@@ -10,52 +10,275 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
+  
+  <href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/script2.js"></script>
 
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" onload="rest()" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar ham"></span>
+        <span class="icon-bar ham"></span>
+        <span class="icon-bar ham"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Cumbuca</a>
+      <a class="navbar-brand" href="#myPage"><img src="img/nomebranca.png" style="width:80px"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">dia-a-dia</a></li>
-        <li><a href="#services">nutri</a></li>
-        <li><a href="#portfolio">onde comer</a></li>
-        <li><a href="#pricing">em casa</a></li>
-        <li><a href="#contact">chat</a></li>
+        <li ><a href="#dia">dia-a-dia</a></li>
+        <li><a href="#nutri">nutri</a></li>
+        <li class="active"><a href="#onde">onde comer</a></li>
+        <!-- <li><a href="#casa">em casa</a></li> -->
+        <li><a href="#chat">chat</a></li>
         <li><a href="#faq">faq</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="jumbotron text-center imgfundo">
-  <img src="img/logo.png" style="width:75px">
-  <p class="titulo" >Cumbuca</p> 
+<div class="jumbotron text-center imgfundo" style="margin-bottom: 0px !important">
+  <img src="img/logon.png" style="width:150px">
+  <!-- <p class="titulo" >Cumbuca</p>  -->
   
   <h4 class="sub">Descrição sei la xxx</h4> 
   <form>
     <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Nutricionista, Vegetariana, Saudavel..." required>
+      <input  type="email" class="form-control" size="50" placeholder="Nutricionista, Vegetariana, Saudavel..." required>
       <div class="input-group-btn">
         <button type="button" class="btn btn-danger cor">Buscar!</button>
       </div>
     </div>
   </form>
 </div>
+<div class="container" align="center">
+  <div class="row " >
+    <div id="restBtn" class="escolha navopcoes" onclick="rest()">
+	  restaurantes
+	</div>
+	<div id="mercBtn" class="escolha navopcoes" onclick="merc()">
+	  mercados
+	</div>
+	<div id="casaBtn" class="escolha navopcoes" onclick="casa()">
+	  em casa
+	</div>
+  </div>
 
+</div>
+<br>
+<div id="restCorpo" class="container">
+	<!-- <div class="row"> -->
+		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
+			<!-- <div class=""> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		
+		<!-- <div class="col-md-1" onclick="rest()"> -->
+		<!-- </div> -->
+		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
+		  <!-- restaurantes -->
+		<!-- </div> -->
+	<!-- </div> -->
+	<div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" alt="Foto [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bea2e8f8%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bea2e8f8%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.8203125%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Nome Restaurante 1</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Entrega 40 ~ 50 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bea2e8f8%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bea2e8f8%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.8203125%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Nome Restaurante 2</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Entrega 30 ~60 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bea2e8f8%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bea2e8f8%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.8203125%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Nome Restaurante 3</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Entrega 50 ~70 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+<div id="mercCorpo" class="container">
+	<!-- <div class="row"> -->
+		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
+			<!-- <div class=""> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		
+		<!-- <div class="col-md-1" onclick="rest()"> -->
+		<!-- </div> -->
+		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
+		  <!-- restaurantes -->
+		<!-- </div> -->
+	<!-- </div> -->
+	<div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" alt="Foto [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bea2e8f8%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bea2e8f8%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.8203125%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Mercado 1</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Entrega 60 ~ 90 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bea2e8f8%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bea2e8f8%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.8203125%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Mercado 2</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Entrega 60 ~ 90 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22288%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20288%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178bea2e8f8%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178bea2e8f8%22%3E%3Crect%20width%3D%22288%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2296.8203125%22%20y%3D%22118.8%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Mercado 3</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Apenas entrega agendada</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div id="casaCorpo" class="container">
+	<!-- <div class="row"> -->
+		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
+			<!-- <div class=""> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		
+		<!-- <div class="col-md-1" onclick="rest()"> -->
+		<!-- </div> -->
+		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
+		  <!-- restaurantes -->
+		<!-- </div> -->
+	<!-- </div> -->
+	<div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/falafel.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Falafel</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Preparo 50 ~ 60 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" alt="Thumbnail [100%x225]" src="img/tapioca.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Tapioca Fitness</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Preparo 5 ~ 10 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/sopa.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Soba de Abóbora</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">Preparo 40 ~50 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</div>
 <!-- Container (About Section) -->
 <!-- <div id="about" class="container-fluid"> -->
   <!-- <div class="row"> -->
@@ -296,9 +519,12 @@
   <!-- <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a> -->
 </footer>
 
-<script>
-
-</script>
+<!-- <script> -->
+<!-- function myFunction() { -->
+  <!-- var x = document.getElementById("restBtn"); -->
+  <!-- x.style.color = "#87060F" ; -->
+<!-- } -->
+<!-- </script> -->
 
 </body>
 </html>
