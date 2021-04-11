@@ -49,3 +49,34 @@ function casa(){
 	mercCorpo.style.display = "none"
 	casaCorpo.style.display = "block"
 }
+function comer(){
+	var restCorpo 	= document.getElementById("restCorpo");
+	var casaCorpo 	= document.getElementById("casaCorpo");
+	var mercCorpo 	= document.getElementById("mercCorpo");
+	var nutri 		= document.getElementById("nutri");
+	var opcoes		= document.getElementById("opcoes");
+	
+	// Mostra só conteudo selecionado
+	opcoes.style.display = "block";
+	restCorpo.style.display = "block";
+	nutri.style.display = "none";
+	
+	casaCorpo.style.display = "none";
+	mercCorpo.style.display = "none";
+}
+
+function nutri(){
+	var restCorpo 	= document.getElementById("restCorpo");
+	var casaCorpo 	= document.getElementById("casaCorpo");
+	var mercCorpo 	= document.getElementById("mercCorpo");
+	var nutri 		= document.getElementById("nutri");
+	var opcoes		= document.getElementById("opcoes");
+	
+	// Mostra só conteudo selecionado
+	opcoes.style.display = "none";
+	restCorpo.style.display = "none";
+	nutri.style.display = "block";
+	
+	casaCorpo.style.display = "none";
+	mercCorpo.style.display = "none";
+}

@@ -19,7 +19,7 @@
   <script src="js/script2.js"></script>
 
 </head>
-<body id="myPage" onload="rest()" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" onload="rest(); comer();" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -34,8 +34,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li ><a href="#dia">dia-a-dia</a></li>
-        <li><a href="#nutri">nutri</a></li>
-        <li class="active"><a href="#onde">onde comer</a></li>
+        <li onclick="nutri()" ><a href="#">nutri</a></li>
+        <li onclick="comer()" ><a href="#">onde comer</a></li>
         <!-- <li><a href="#casa">em casa</a></li> -->
         <li><a href="#chat">chat</a></li>
         <li><a href="#faq">faq</a></li>
@@ -48,7 +48,7 @@
   <img src="img/Logon.png" style="width:150px">
   <!-- <p class="titulo" >Cumbuca</p>  -->
   
-  <h4 class="sub">Descrição sei la xxx</h4> 
+  <!-- <h4 class="sub">Descrição sei la xxx</h4>  -->
   <form>
     <div class="input-group">
       <input  type="email" class="form-control" size="50" placeholder="Nutricionista, Vegetariana, Saudavel..." required>
@@ -58,7 +58,7 @@
     </div>
   </form>
 </div>
-<div class="container" align="center">
+<div id="opcoes" class="container" align="center">
   <div class="row " >
     <div id="restBtn" class="escolha navopcoes" onclick="rest()">
 	  restaurantes
@@ -73,7 +73,8 @@
 
 </div>
 <br>
-<div id="restCorpo" class="container">
+<div id="comer">
+	<div id="restCorpo" class="container">
 	<!-- <div class="row"> -->
 		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
 			<!-- <div class=""> -->
@@ -86,7 +87,7 @@
 		  <!-- restaurantes -->
 		<!-- </div> -->
 	<!-- </div> -->
-	<div class="album py-5 bg-light">
+	  <div class="album py-5 bg-light">
         <div class="container">
 
           <div class="row">
@@ -94,7 +95,7 @@
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" alt="Foto [100%x225]" src="img/r1.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
                 <div class="card-body">
-                  <p class="card-text nomelocal">Nome Restaurante 1</p>
+                  <p class="card-text nomelocal">Restaurante 1</p>
                   <p class="card-text">#frutos_do_mar</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -110,7 +111,7 @@
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" alt="Thumbnail [100%x225]" src="img/r2.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
                 <div class="card-body">
-                  <p class="card-text nomelocal">Nome Restaurante 2</p>
+                  <p class="card-text nomelocal">Restaurante 2</p>
                   <p class="card-text">#churrasco #rodizio</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -126,7 +127,7 @@
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" src="img/r3.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
                 <div class="card-body">
-                  <p class="card-text nomelocal">Nome Restaurante 3</p>
+                  <p class="card-text nomelocal">Restaurante 3</p>
                   <p class="card-text">#japones #oriental</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
@@ -142,7 +143,9 @@
           </div>
         </div>
       </div>
+	</div>
 </div>
+
 
 
 
@@ -216,18 +219,31 @@
 
 
 <div id="casaCorpo" class="container">
-	<!-- <div class="row"> -->
-		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
-			<!-- <div class=""> -->
-			<!-- </div> -->
-		<!-- </div> -->
-		
-		<!-- <div class="col-md-1" onclick="rest()"> -->
-		<!-- </div> -->
-		<!-- <div class="col-md-6 emp" onclick="rest()"> -->
-		  <!-- restaurantes -->
-		<!-- </div> -->
-	<!-- </div> -->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="">
+				tempo de preparo (min): 
+			</div>
+		</div>
+		<div class="col-md-3">
+			<label class=" check"> 
+			  <input type="checkbox">&nbsp até 20 &nbsp &nbsp
+			  <span class="checkmark"></span>
+			</label>
+		</div>
+		<div class="col-md-3">
+			<label class=" check"> 
+			  <input type="checkbox">&nbsp de 20 a 50 &nbsp &nbsp
+			  <span class="checkmark"></span>
+			</label>
+		</div>
+		<div class="col-md-3 check">
+			<label class=" check"> 
+			  <input type="checkbox">&nbsp mais de 50 &nbsp &nbsp
+			  <span class="checkmark"></span>
+			</label>
+		</div>
+	</div>
 	<div class="album py-5 bg-light">
         <div class="container">
 
@@ -276,6 +292,90 @@
                       <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
                     </div>
                     <small class="text-muted">Preparo 40 ~50 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="nutri" class="container">
+	<!-- <div class="row"> -->
+		<!-- <div class="col-md-3"> -->
+			<!-- <div class=""> -->
+				<!-- Distancia:  -->
+			<!-- </div> -->
+		<!-- </div> -->
+		<!-- <div class="col-md-3"> -->
+			<!-- <label class=" check">  -->
+			  <!-- <input type="checkbox">&nbsp 1.7 km &nbsp &nbsp -->
+			  <!-- <span class="checkmark"></span> -->
+			<!-- </label> -->
+		<!-- </div> -->
+		<!-- <div class="col-md-3"> -->
+			<!-- <label class=" check">  -->
+			  <!-- <input type="checkbox">&nbsp 5 km &nbsp &nbsp -->
+			  <!-- <span class="checkmark"></span> -->
+			<!-- </label> -->
+		<!-- </div> -->
+		<!-- <div class="col-md-3 check"> -->
+			<!-- <label class=" check">  -->
+			  <!-- <input type="checkbox">&nbsp 3.4 km &nbsp &nbsp -->
+			  <!-- <span class="checkmark"></span> -->
+			<!-- </label> -->
+		<!-- </div> -->
+	<!-- </div> -->
+	<div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/n1.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Nutricionista</p>
+                  <p class="card-text">#emagrecimento</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">distancia 1.3 km</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" alt="Thumbnail [100%x225]" src="img/n2.jpg" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Nutricionista</p>
+                  <p class="card-text">#vegetariana</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">distancia 3.1 km</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opcoes">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="img/n3.png" data-holder-rendered="true" style=" width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text nomelocal">Nutricionista</p>
+                  <p class="card-text">#diabetes</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button> -->
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button> -->
+                    </div>
+                    <small class="text-muted">distancia 5 km</small>
                   </div>
                 </div>
               </div>
