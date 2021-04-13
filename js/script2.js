@@ -55,7 +55,9 @@ function comer(){
 	var mercCorpo 	= document.getElementById("mercCorpo");
 	var nutri 		= document.getElementById("nutri");
 	var opcoes		= document.getElementById("opcoes");
-	
+	var chat		= document.getElementById("chat");
+	var buscar		= document.getElementById("buscar");
+	var data		= document.getElementById("data");
 	// Mostra só conteudo selecionado
 	opcoes.style.display = "block";
 	restCorpo.style.display = "block";
@@ -63,6 +65,9 @@ function comer(){
 	
 	casaCorpo.style.display = "none";
 	mercCorpo.style.display = "none";
+	chat.style.display = "none";
+	buscar.style.display= "block";
+	data.style.display= "none";
 }
 
 function nutri(){
@@ -71,6 +76,9 @@ function nutri(){
 	var mercCorpo 	= document.getElementById("mercCorpo");
 	var nutri 		= document.getElementById("nutri");
 	var opcoes		= document.getElementById("opcoes");
+	var chat		= document.getElementById("chat");
+	var buscar		= document.getElementById("buscar");
+	var data		= document.getElementById("data");
 	
 	// Mostra só conteudo selecionado
 	opcoes.style.display = "none";
@@ -79,4 +87,65 @@ function nutri(){
 	
 	casaCorpo.style.display = "none";
 	mercCorpo.style.display = "none";
+	chat.style.display = "none";
+	buscar.style.display= "block";
+	data.style.display= "none";
 }
+
+function chat(){
+	var restCorpo 	= document.getElementById("restCorpo");
+	var casaCorpo 	= document.getElementById("casaCorpo");
+	var mercCorpo 	= document.getElementById("mercCorpo");
+	var nutri 		= document.getElementById("nutri");
+	var opcoes		= document.getElementById("opcoes");
+	var chat		= document.getElementById("chat");
+	var buscar		= document.getElementById("buscar");
+	var data		= document.getElementById("data");
+	
+	// Mostra só conteudo selecionado
+	opcoes.style.display = "none";
+	restCorpo.style.display = "none";
+	nutri.style.display = "none";
+	
+	casaCorpo.style.display = "none";
+	mercCorpo.style.display = "none";
+	chat.style.display = "block";
+	buscar.style.display= "block";
+	data.style.display= "none";
+}
+
+function ini(){
+	var restCorpo 	= document.getElementById("restCorpo");
+	var casaCorpo 	= document.getElementById("casaCorpo");
+	var mercCorpo 	= document.getElementById("mercCorpo");
+	var nutri 		= document.getElementById("nutri");
+	var opcoes		= document.getElementById("opcoes");
+	var chat		= document.getElementById("chat");
+	var buscar		= document.getElementById("buscar");
+	var data		= document.getElementById("data");
+	
+	// Mostra só conteudo selecionado
+	opcoes.style.display = "none";
+	restCorpo.style.display = "none";
+	nutri.style.display = "none";
+	
+	casaCorpo.style.display = "none";
+	mercCorpo.style.display = "none";
+	chat.style.display = "none";
+	buscar.style.display= "none";
+	data.style.display= "block";
+}
+
+function lista(){
+	var lista 	= document.getElementById("lista");
+	
+	// lista.style.display = "block";
+	if (window.getComputedStyle(lista).display == "none") {
+      lista.style.display = "block";
+	}
+	else {
+      lista.style.display = "none";
+	}
+}
+
+
